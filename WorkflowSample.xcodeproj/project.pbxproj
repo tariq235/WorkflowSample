@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52063318245261FF00D7F984 /* Rswift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52063316245261FF00D7F984 /* Rswift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52063319245261FF00D7F984 /* OneSignal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52063317245261FF00D7F984 /* OneSignal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5206331A2452620500D7F984 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52063317245261FF00D7F984 /* OneSignal.framework */; };
+		5206331B2452620500D7F984 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52063316245261FF00D7F984 /* Rswift.framework */; };
 		52A8817C2451400D00C94B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8817B2451400D00C94B4F /* AppDelegate.swift */; };
 		52A8817E2451400D00C94B4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8817D2451400D00C94B4F /* SceneDelegate.swift */; };
 		52A881802451400D00C94B4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8817F2451400D00C94B4F /* ContentView.swift */; };
@@ -26,7 +30,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		520633042452608B00D7F984 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52063318245261FF00D7F984 /* Rswift.framework in Embed Frameworks */,
+				52063319245261FF00D7F984 /* OneSignal.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		52063316245261FF00D7F984 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		52063317245261FF00D7F984 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = Carthage/Build/iOS/OneSignal.framework; sourceTree = "<group>"; };
 		52A881782451400D00C94B4F /* WorkflowSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkflowSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A8817B2451400D00C94B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52A8817D2451400D00C94B4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5206331A2452620500D7F984 /* OneSignal.framework in Frameworks */,
+				5206331B2452620500D7F984 /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520633092452612E00D7F984 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52A8816F2451400D00C94B4F = {
 			isa = PBXGroup;
 			children = (
+				52063317245261FF00D7F984 /* OneSignal.framework */,
+				52063316245261FF00D7F984 /* Rswift.framework */,
 				52A8817A2451400D00C94B4F /* WorkflowSample */,
 				52A881912451401200C94B4F /* WorkflowSampleTests */,
 				52A881792451400D00C94B4F /* Products */,
+				520633092452612E00D7F984 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +151,7 @@
 				52A881752451400D00C94B4F /* Frameworks */,
 				52A881762451400D00C94B4F /* Resources */,
 				52063303245149BE00D7F984 /* SwiftLint */,
+				520633042452608B00D7F984 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +421,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkflowSample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorkflowSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,6 +445,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkflowSample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WorkflowSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

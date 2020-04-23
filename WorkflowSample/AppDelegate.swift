@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OneSignal
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
