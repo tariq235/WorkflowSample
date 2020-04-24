@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
